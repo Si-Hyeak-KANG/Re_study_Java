@@ -1,0 +1,28 @@
+package ch09;
+
+public class SubjectTest {
+
+	public static void main(String[] args) {
+
+		Student soojeong = new Student(01225 , "soojeong");
+		soojeong.setKoreanSubject("국어", 88);
+		soojeong.setMathSubject("수학",100);
+		
+		Student sihyeak = new Student(0412 , "sihyeak");
+		sihyeak.setKoreanSubject("국어", 100);
+		sihyeak.setMathSubject("수학", 100);
+		
+		soojeong.showScoreInfo();
+		sihyeak.showScoreInfo();
+			
+		if(soojeong.total() > sihyeak.total()) {
+			
+			soojeong.getWinner();
+		} else if(soojeong.total() < sihyeak.total()) {
+			sihyeak.getWinner();
+		}
+		
+		System.out.println("둘의 총점이 같습니다.");
+	}
+
+}
